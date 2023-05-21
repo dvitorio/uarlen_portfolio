@@ -2,55 +2,145 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uarlen Becker</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uarlen Becker - página pessoal</title>
+  <!--BOOTSTRAP-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <!--CSS-->
+  <link rel="stylesheet" href="/css/styles.css">
+  <!--FONTAWESOME-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--AOS-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <header>
-        <h1>Uarlen Becker - página pessoal</h1>
-        <nav>
-          <ul>
-            <li><a href="#sobre-mim">Sobre Mim</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <section id="sobre-mim">
-          <h2>Sobre Mim</h2>
-          <p>Aqui você pode escrever uma breve descrição sobre você.</p>
-        </section>
-        <section id="projetos">
-          <h2>Projetos</h2>
-          <ul>
-            <li><a href="#">Projeto 1</a></li>
-            <li><a href="#">Projeto 2</a></li>
-            <li><a href="#">Projeto 3</a></li>
-          </ul>
-        </section>
-        <section id="contato">
-          <h2>Contato</h2>
-          <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email">
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem"></textarea>
-            <button type="submit">Enviar</button>
-          </form>
-        </section>
-      </main>
-      <footer>
-        <p>&copy; 2023 Meu Site Pessoal</p>
-      </footer>
+  <!--Barra de navegação e menu-->
+  <section class="firstPage">
+    <nav class="navbar navbar-expand-lg navbar-light mx-auto">
+      <h1 class="h1 mr-5 text-black" href="#">Uarlen Becker</h1>
+      <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav menu">
+          <a class="nav-link mr-5 active" href="#">Biografia</a>
+          <a class="nav-link mr-5" href="#">Literatura</a>
+          <a class="nav-link mr-5" href="#">Portifólio</a>
+          <a class="nav-link mr-5" href="#">Teatro</a>
+          <button class="btn btn-primary text-white">Contato</button>
+        </div>
+      </div>
+    </nav>
 
+    <!--Carrossel-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/img/uarlen1_carousel.png" class="d-block img mx-auto" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mentoria em escrita</h5>
+            <button class="btn btn-warning text-white">Agende sua mentoria em escrita</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/img/uarlen2_carousel.png" class="d-block img mx-auto" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Artista de teatro</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/img/uarlen3_carousel.png" class="d-block img mx-auto" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Escritor</h5>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
+    </div>
+  </section>
+
+
+  <!--Descrição da Bio-->
+  <div class="container-fluid bio">
+    <div class="row">
+      <div data-aos="fade-up" class="col-xl-4 mx-auto bioPhoto p-2">
+        <img class="d-block img mx-auto" src="/img/uarlen6.png" alt="">
+      </div>
+      <div class="col-xl-8" data-aos="fade-left">
+        <h4 class="py-3 text-secondary">Biografia</h4>
+        <p class="bioText text-secondary">Sou artista de teatro desde 1996, quando iniciei em uma oficina para atores da Fundação Cultural do Estado da Bahia. 
+          Ingressei em grupos e me apresentei em peças de rua e palco. Em 2000 ajudei a fundar o grupo Usina de Teatro, onde iniciei careira como
+          diretor, iluminador e dramaturgo.
+        </p> 
+        <p class="bioText text-secondary">Em 2005 ingressei na Escola de Teatro da Universidade Federal da Bahia, no curso de Direção Teatral, onde
+          sistematizei estudos em teatro, cinema e vídeo. Ganhei prêmios como diretor e ator, como o prêmio Braskem de Teatro baiano em 2008 com a peça "Gozo frio"
+          com o grupo Usina de Teatro. Lancei sete livros, entre contos, poesia e dramaturgia.
+          Sou também Licenciado em História.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Formulário de contato-->
+  <div class="bg-dark container mt-5 p-3 rounded" data-aos="fade-up">
+    <h2 class="text-center text-light">Entre em contato</h2>
+    <form id="formulario-contato">
+      <div class="form-group">
+        <label class="text-white" for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label class="text-white" for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label class="text-white" for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" class="form-control" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+
+
+
+
+
+  <!--JAVASCRIPT BOOTSTRAP-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"></script>
+    <!--AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
